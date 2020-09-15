@@ -2,24 +2,24 @@
   <div id="app">
     <img src="./assets/logo.png">
     <div>
-      <p>
-        If Element is successfully added to this project, you'll see an
-        <code v-text="'<el-button>'"></code>
-        below
-      </p>
-      <el-button>el-button</el-button>
+      <router-link to="/about">Go to Foo</router-link>
+      <br>
+      <router-link to="/">Go to root</router-link>
+      <router-view></router-view>
     </div>
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Home from './views/Home'
+import About from './views/About'
 export default {
   name: 'app',
-  components: {
-    HelloWorld
+  component:{Home,About},
+  methods:{
+    click(){
+      this.$router.push('/about')
+    }
   }
 }
 </script>

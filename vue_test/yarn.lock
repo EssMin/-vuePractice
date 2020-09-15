@@ -8315,7 +8315,7 @@ vue-hot-reload-api@^2.3.0:
     merge-source-map "^1.1.0"
     source-map "^0.6.1"
 
-vue-loader@^15.9.2:
+vue-loader@^15.9.2, vue-loader@^15.9.3:
   version "15.9.3"
   resolved "https://registry.npm.taobao.org/vue-loader/download/vue-loader-15.9.3.tgz?cache=0&sync_timestamp=1599639207320&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvue-loader%2Fdownload%2Fvue-loader-15.9.3.tgz#0de35d9e555d3ed53969516cac5ce25531299dda"
   integrity sha1-DeNdnlVdPtU5aVFsrFziVTEpndo=
