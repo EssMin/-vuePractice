@@ -3,12 +3,58 @@
     <el-container>
       <el-header>Header</el-header>
       <el-container>
-        <el-aside width="200px">Aside</el-aside>
-        <el-main>Main</el-main>
+        <el-aside width="200px">
+          <h5>侧边栏</h5>
+          <el-row class="tac">
+            <el-col :span="12">
+              <el-menu
+
+                      router
+                      :default-active="$route.path"
+                      class="el-menu-vertical-demo"
+                      @open="handleOpen"
+                      @close="handleClose">
+                <el-submenu index="/about">
+                  <template slot="title">
+                    <i class="el-icon-location"></i>
+                    <span>导航一</span>
+                  </template>
+                  <el-menu-item-group index>
+                    <el-menu-item :index="'about/UserProfilePreview'">选项1</el-menu-item>
+                  </el-menu-item-group>
+                </el-submenu>
+              </el-menu>
+            </el-col>
+          </el-row>
+
+        </el-aside>
+        <el-main>
+          <router-view></router-view>
+        </el-main>
       </el-container>
     </el-container>
   </div>
 </template>
+<script>
+  export default {
+    data(){
+      return {
+
+      }
+    },
+    methods: {
+      handleOpen(key, keyPath) {
+        console.log(key, keyPath);
+      },
+      handleClose(key, keyPath) {
+        console.log(key, keyPath);
+      }
+    },
+    created(){
+      console.log(this.$router)
+    },
+  }
+</script>
 <style scoped lang="scss">
   .el-header, .el-footer {
     background-color: #B3C0D1;
