@@ -1,3 +1,7 @@
+:root{
+  --color-test:red;
+};
+$colorTest: var(--color-test); //用var来盛放变量名
 /* 改变主题色变量 */
 $--color-primary: teal;
 /*改变了主题危险告警的变量*/

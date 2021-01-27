@@ -8,13 +8,21 @@
       <el-link type="danger">危险链接</el-link>
       <el-link type="info">信息链接</el-link>
     </div>
+    <el-color-picker
+            v-model="color1"
+            @active-change = 'changeColor'
+    >
+
+    </el-color-picker>
+    <div style="width: 100px;height: 100px;color: var(--color-test);"></div>
+    <div class="colorTest"></div>
   </div>
 </template>
 <script>
   export default {
     data(){
       return {
-
+        color1:'#409EFF',
       }
     },
     methods: {
@@ -23,6 +31,10 @@
       },
       handleClose(key, keyPath) {
         console.log(key, keyPath);
+      },
+      changeColor(color){
+        console.log(color)
+        document.getElementsByTagName('body')[0].style.setProperty('--color-test', color)
       }
     },
     created(){
@@ -52,4 +64,9 @@
     line-height: 160px;
   }
 
+  .colorTest{
+    width: 100px;
+    height: 100px;
+    color: var(--color-test);
+  }
 </style>
