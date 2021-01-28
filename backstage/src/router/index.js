@@ -1,25 +1,31 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import LogIn from '@/components/logIn.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'Login',
+    component: LogIn
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () => import('../views/About.vue'),
+    path: '/frame',
+    name: 'frame',
+    component: () => import('@/components/Frame.vue'),
     children:[
       {
-        path: 'UserProfilePreview',
-        name: 'UserProfilePreview',
-        component: () => import('../views/UserProfilePreview.vue'),
-      }
+        path: 'colorTest',
+        name: 'colorTest',
+        component: () => import('@/views/colorTest.vue'),
+      },
+      {
+        path: 'HelloWorld',
+        name: 'HelloWorld',
+        component: () => import('@/views/HelloWorld.vue'),
+      },
+
     ]
   }
 ]

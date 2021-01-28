@@ -1,0 +1,4 @@
+:root{
+  --colorTest: rgba(85,119,55,0.6);
+};
+$colorTest: var(--colorTest); //用var来盛放变量名

@@ -1,12 +1,17 @@
-:root{
-  --color-test:red;
-};
-$colorTest: var(--color-test); //用var来盛放变量名
 /* 改变主题色变量 */
 $--color-primary: teal;
 /*改变了主题危险告警的变量*/
 $--color-danger: #3232f5 !default;
-/* 改变 icon 字体路径变量，必需 */
-$--font-path: '~element-ui/lib/theme-chalk/fonts';
 
-@import "~element-ui/packages/theme-chalk/src/index";
+/*自定义element主题引入方式*/
+/* 改变 icon 字体路径变量，必需 */
+$--font-path:'./element-variables/fonts';
+@import "./element-variables";
+
+/*element主题chalk依赖引入方式*/
+/* 改变 icon 字体路径变量，必需 */
+//$--font-path: '~element-ui/lib/theme-chalk/fonts';
+//@import "~element-ui/packages/theme-chalk/src/index";
+
+/*引入自定义主题部分*/
+@import "./theme";
