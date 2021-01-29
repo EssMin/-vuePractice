@@ -21,6 +21,11 @@ const routes = [
         component: () => import('@/views/colorTest.vue'),
       },
       {
+        path: 'chartTest',
+        name: 'chartTest',
+        component: () => import('@/views/chartTest.vue'),
+      },
+      {
         path: 'HelloWorld',
         name: 'HelloWorld',
         component: () => import('@/views/HelloWorld.vue'),

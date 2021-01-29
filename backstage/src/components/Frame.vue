@@ -15,13 +15,16 @@
                                 <el-submenu index="/">
                                     <template slot="title">
                                         <i class="el-icon-location"></i>
-                                        <span>导航一</span>
+                                        <span>测试demo</span>
                                     </template>
                                     <el-menu-item-group index>
                                         <el-menu-item index="/frame/colorTest">颜色测试</el-menu-item>
                                     </el-menu-item-group>
                                     <el-menu-item-group index>
                                         <el-menu-item index="/frame/HelloWorld">HelloWord</el-menu-item>
+                                    </el-menu-item-group>
+                                    <el-menu-item-group index>
+                                        <el-menu-item index="/frame/chartTest">chartTest</el-menu-item>
                                     </el-menu-item-group>
                                 </el-submenu>
                             </el-menu>
@@ -55,25 +58,23 @@
     }
 </script>
 <style lang="scss" scoped>
-    .el-header, .el-footer {
-        background-color: #B3C0D1;
+    @import "../assets/ThemeStyle/theme.scss";
+    .el-header{
+        background-color: $colorHead;
         color: #333;
         text-align: center;
-        line-height: 60px;
     }
 
     .el-aside {
-        background-color: #D3DCE6;
+        background-color: $colorAside;
         color: #333;
         text-align: center;
-        line-height: 200px;
     }
 
     .el-main {
-        background-color: #E9EEF3;
+        background-color: $colorMain;
         color: #333;
         text-align: center;
-        line-height: 160px;
     }
 
 </style>

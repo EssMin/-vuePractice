@@ -1,4 +1,10 @@
 :root{
   --colorTest: rgba(85,119,55,0.6);
+  --colorHead: rgb(98, 187, 255);
+  --colorAside: rgb(14, 149, 255);
+  --colorMain: rgb(190, 253, 255);
 };
-$colorTest: var(--colorTest); //用var来盛放变量名
+$colorTest: var(--colorTest); //测试页颜色
+$colorHead: var(--colorHead); //测试页颜色
+$colorAside: var(--colorAside); //测试页颜色
+$colorMain: var(--colorMain); //测试页颜色
